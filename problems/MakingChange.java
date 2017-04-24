@@ -6,12 +6,17 @@ public class MakingChange {
         int rows = denominations.length;
         int cols = amount + 1;
         int[][] dpTable = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            dpTable[i][0] = 1;
-        }
+        // for (int i = 0; i < rows; i++) {
+        //     dpTable[i][0] = 1;
+        // }
 
         for (int i = 0; i < rows; i++) {
-            for (int j = 1; j < cols; j++) {
+            for (int j = 0; j < cols; j++) {
+                if (j == 0) {
+                    dpTable[i][j] = 1;
+                    continue;
+                }
+
                 int currentWays = 0;
                 if (i > 0) {
                     currentWays = dpTable[i - 1][j];
