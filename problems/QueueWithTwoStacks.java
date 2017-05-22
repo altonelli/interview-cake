@@ -24,6 +24,10 @@ public class QueueWithTwoStacks {
             }
             return stackTwo.pop();
         }
+
+        public boolean isEmpty() {
+            return stackOne.isEmpty() && stackTwo.isEmpty();
+        }
     }
 
     public static void main(String[] args) {
