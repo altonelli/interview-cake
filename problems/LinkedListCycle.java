@@ -17,7 +17,7 @@ public class LinkedListCycle {
         if (leader.next == null)
             return false;
 
-        while (leader.next != null && leader.next.next != null) {
+        while (leader != null && leader.next != null) {
             leader = leader.next.next;
             chaser = chaser.next;
             if (leader == chaser) {
