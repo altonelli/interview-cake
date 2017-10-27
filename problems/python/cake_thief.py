@@ -1,4 +1,6 @@
 
+# TODO: Could also implement in other order: loop through weights then cake tuples
+
 def max_duffel_bag_value(cake_tuples, weight_capacity):
     max_gains = [0] * (weight_capacity + 1)
     for cake_tuple in cake_tuples:
